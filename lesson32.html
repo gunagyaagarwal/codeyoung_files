@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lesson 32</title>
+</head>
+<body>
+<button onclick="show_month();">show_month</button>
+<button onclick="show_day();">show_day</button>
+<form>
+	enter a number<input type="text" id="number1" onkeyup="day_check();" minlength="1" maxlength="1">
+
+
+
+</form>
+<script type="text/javascript">
+	function show_month() {
+		var d=new Date();
+		var m=d.getMonth();
+		switch(m){
+			case 0:alert("January");
+			break;
+			case 1:alert("february");
+			break;
+			case 2:alert("march");
+			break;
+			case 3:alert("april");
+			break;
+			case 4:alert("may");
+			break;
+			case 5:alert("june");
+			break;
+			case 6:alert("july");
+			break;
+			case 7:alert("august");
+			break;
+			case 8:alert("september");
+			break;
+			case 9:alert("october");
+			break;
+			case 10:alert("november");
+			break;
+			case 11:alert("december");
+			break;
+		
+		}
+	}
+
+
+
+	function show_day() {
+		var day= prompt("Enter a number");
+		switch(day){
+		case "0":alert("sunday");
+		break;
+		case "1":alert("monday");
+		break;
+		case "2":alert("tuesday");
+		break;
+		case "3":alert("wednesday");
+		break;
+		case "4":alert("thursday");
+		break;
+		case "5":alert("friday");
+		break;
+		case "6":alert("saturday");
+		break;
+		default:alert("The entered value is incorrect");
+		}
+		
+	}
+
+	function day_check() {
+	
+	if(document.getElementById('number1').value>6 ){
+		alert("You cannot enter values less than 0 or greater than 6");
+	document.getElementById('number1').value="";
+	}
+	
+	}
+
+</script>
+</body>
+</html>

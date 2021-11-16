@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lessson36sec.file</title>
+</head>
+<body>
+<button onclick="calculator();">calculator</button>
+<button onclick="multiplication_table();">multiplication_table</button>
+<script type="text/javascript">
+	function calculator() {
+		var n1=prompt("enter first number");
+		var n2=prompt("enter second number");
+		var s=prompt("enter the calculative symbol");
+		switch(s){
+			case "+":alert(n1+n2);
+			break;
+			case "-":alert(n1-n2);
+			break;
+			case "/":alert(n1/n2);
+			break;
+			case "*":alert(n1*n2);
+			break;
+			default:alert("you have entered wrong symbol"); 
+
+
+
+		}
+
+
+}
+
+	function multiplication_table() {
+	var number =prompt("enter the number");
+	var rows =prompt("how many rows do you want");
+	for(var i=1; i<=rows; i++){
+			document.write(number +"*" +i +"="+(number*i));
+			document.write("<br>")
+
+
+		}
+
+
+
+
+
+
+	}
+
+</script>
+
+</body>
+</html>

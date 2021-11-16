@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lesson 37</title>
+
+</head>
+<body>
+<form>
+	username<input type="text" id="username">
+	mobile no.<input type="number" id="mobile_no">
+	password<input type="password" id="password">
+	confirm password<input type="password" id="confirm_password">
+
+	<button onclick="save();">save</button>
+</form>
+	<button onclick="click();">click</button>
+<script type="text/javascript">
+	
+	function save() {
+		if(document.getElementById('username').value=="gunagya" || document.getElementById('username').value=="admin" 
+
+			&& document.getElementById('password').value==document.getElementById('confirm_password').value){
+			//alert("You have sucessfully logged in");
+			window.location.href="lesson31.html";
+		}
+		
+		else{
+			alert("You have entered some wrong data");	
+		}
+	}
+
+	function click(){
+		location.replace("lesson31.html");
+	}
+
+
+
+</script>
+
+</body>
+</html>

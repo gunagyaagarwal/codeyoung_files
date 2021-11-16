@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lesson 36</title>
+<style>
+	#flex-container{display:flex;
+
+	}
+
+	
+	#part1{width:130px ;
+		height:60px;
+		background-color:lightblue; 
+		animation-name:window;
+		animation-duration:6s;
+		animation-iteration-count:1; position:relative;
+
+}
+
+	@keyframes window{
+		from{left:0px;}
+		to{left:600px;}
+}
+
+
+
+	#object1{border-radius:150px;
+		height:50px;
+	width:50px ;
+	background-color:black;
+	animation-name:wheel ;
+	animation-duration:6s ;
+	animation-iteration-count:1;
+	position:relative;
+}	
+
+	@keyframes wheel{
+		from{left:0px;}
+		to{left:600px;}
+}
+
+		#object2{border-radius:100px;
+		height:50px ;
+		width:50px ;
+		background-color: black;
+		margin-left:30px;
+		animation-name: wheel1;
+		animation-duration: 6s;
+		animation-iteration-count:1;
+		position:relative;
+} 
+
+
+@keyframes wheel1{
+		from{left:0px;}
+		to{left:600px;}
+		
+	
+}
+	
+
+</style>
+</head>
+<body>
+<div id ="part1"> </div>
+<div id="flex-container">
+<div id="object1"></div>
+<div id="object2"></div>
+
+</div>
+</body>
+</html>

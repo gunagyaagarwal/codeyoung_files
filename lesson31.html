@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lesson 31</title>
+</head>
+<body>
+<button onclick="todays_date();">todays_date</button>
+<button onclick="check_date();">check_date</button>
+<button onclick="check_month();">check_month</button>
+<button onclick="check_year();">check_year</button>
+<button onclick="emp_details();">employee</button>
+<script type="text/javascript">
+	todays_date() {
+		var d= new Date();
+		alert(d);
+	}
+
+	function check_date() {
+		var d= new Date();
+		alert(d.getDate());
+	}
+	function check_month() {
+		var d= new Date();
+		alert(d.getMonth());
+	}
+	function check_year() {
+		var d= new Date();
+		alert(d.getMonth());
+	}
+	function emp_details(){
+		emp={
+			id:1,
+			name:"gunagya",
+			address:"U.P"
+
+		}
+	alert("Employee ID:"+emp.id+"\n Employee NAME:"+emp.name+"\n Employee ADDRESS:"+emp.address);
+	}
+
+
+
+</script>
+
+</body>
+</html>
