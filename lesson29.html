@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lesson29</title>
+<style>
+	#id1{
+		font-size:27px;
+	}
+</style>
+</head>
+<body>
+<button onclick="clickme();">click me</button>
+<button onclick="my_age();">my_age</button> 
+<button onclick="my_age1();">my_age1</button>
+<button onclick="address();">address</button>
+<button onclick="address1();">address1</button>
+<button onclick="changetext();">changetext</button>
+<div id="id1" style="color:blue;"></div>
+<div>i am gunagya</div>a 
+
+<script type="text/javascript">
+	function clickme(){
+		alert("hello,I am Devil");}	
+	
+	function my_age(){
+			var a=25;
+			alert("hello i am "+a);
+	}
+	function my_age1(){
+		var a =14;
+		alert("i am "+a+" years old");
+	}
+	function address(){ 		
+			document.getElementById("id1").innerHTML="noida sec-100,Utter Pradesh";
+
+	}
+	function address1(){
+		var b=100; 
+		var a=150;
+			document.getElementById("id1").innerHTML="noida sec-"+b+","+a+"Uttar Pradesh";
+
+	}
+</script>
+</body>
+</html>
