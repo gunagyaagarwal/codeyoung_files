@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>World Science Day</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		@font-face {
+			font-family: FRESHBOT;
+			src: url("fonts/FRESHBOT.ttf");
+		}
+
+		.nav-style {
+			color: black;
+			background-color: lightseagreen;
+			font-size: 26px;
+			position: sticky;
+			z-index: 999999999;
+			padding: 10px 0px 10px;
+		}
+
+		.nav-style ul li {
+			color: #f1f1f1;
+			font-size: 22px;
+			cursor: pointer;
+			text-decoration: none;
+		}
+
+		.nav-style ul li a {
+			text-decoration: none;
+		}
+
+		.container-margin {
+			margin: 0px 20px;
+		}
+
+		.intro-section {
+			font-size: 19px;
+			position: relative;
+			z-index: 999999999;
+		}
+
+		.banner-image {
+			height: 500px;
+			object-fit: cover;
+			object-position: center;
+			width: 100%;
+			padding: 1px;
+
+		}
+
+		.h1-heading {
+			font-size: 30px;
+			line-height: 40px;
+			letter-spacing: 3px;
+			font-weight: 400;
+			margin-bottom: 0px;
+		}
+
+		.h1-heading-p {
+			padding: 20px 0px;
+			color: #727272;
+			font-size: 18px;
+		}
+
+		.intro-section ul li {
+			color: #727272;
+			font-size: 16px;
+		}
+
+		.flex-container {
+			display: flex;
+			margin: 0 -5px;
+		}
+
+		.flex-item {
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+			/* this adds the "card" effect */
+			padding: 10px;
+			text-align: center;
+			background-color: #f1f1f1;
+		}
+
+		a {
+			color: white;
+			display: inline-block;
+			padding: 10px 19px 10px 25px;
+			font-family: FRESHBOT;
+		}
+
+		li {
+			font-size: 26px;
+			display: inline-block;
+		}
+
+		.card {
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+			max-width: 350px;
+			margin: auto;
+			text-align: center;
+			min-height: 500px;
+			max-height: 500px;
+		}
+
+		.title {
+			color: grey;
+			font-size: 14px;
+		}
+
+		.card h1 {
+			font-size: 20px;
+		}
+
+		.margin-12 {
+			margin-right: 12px !important;
+		}
+
+		.sectopn-wrapper {
+			margin-bottom: 60px;
+			margin-top: 30px;
+		}
+
+		.content {
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+			transition: 0.3s;
+			display: none;
+			padding: 20px 0px;
+			color: #727272;
+			font-size: 18px;
+			padding-top: 30px;
+			padding-bottom: 60px;
+		}
+
+		button {
+			border: 2px solid black;
+			background-color: white;
+			border-color: white;
+			color: white;
+			padding: 14px 28px;
+			font-size: 16px;
+			cursor: pointer;
+			margin-top: 20px;
+		}
+
+
+		.back {
+			background-color: #f1f1f1;
+			color: black;
+			display: none;
+		}
+
+		.next {
+			background-color: lightseagreen;
+			color: white;
+		}
+
+		.round {
+			border-radius: 50%;
+		}
+
+		.back {
+			display: none;
+		}
+
+		button:hover {
+			background-color: #ddd;
+			color: black;
+		}
+
+		.end {
+			display: none;
+		}
+
+		.col-md-3 {
+			display: inline-block;
+			margin-left: -4px;
+		}
+
+		.col-md-3 img {
+			width: 100%;
+			height: 280px;
+		}
+
+		body .carousel-indicators li {
+			background-color: black;
+		}
+
+		body .carousel-control-prev-icon,
+		body .carousel-control-next-icon {
+			background-color: black;
+		}
+
+		body .no-padding {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+
+		.thankyou {
+			text-align: center;
+			padding: 0px;
+			color: #ff8c00;
+		}
+
+		.thankyou .image {
+			width: 300px;
+			margin: 0 auto;
+		}
+
+		.thankyou .image img {
+			width: 100%;
+		}
+
+		.thankyou h1 {
+			font-size: 25px;
+			color: #2196f3;
+			font-weight: 400;
+			margin: 20px 0px;
+		}
+
+		.thankyou p {
+			margin-bottom: 0px;
+		}
+
+		.thankyou .button {
+			margin: 30px 0px;
+		}
+
+		.thankyou button {
+			border: 1px solid #2196f3;
+			background: #fff;
+			color: #2196f3;
+			padding: 5px 20px;
+			border-radius: 20px;
+			font-size: 14px;
+		}
+		.fotter-wraper{
+			margin: 0px;
+			padding: 15px 0px 15px;
+			text-align: center;
+			color: #fff;
+			background-color: lightseagreen;
+			font-size: 26px;
+  		}
+		  .li-fs{
+			  font-size:16px;
+		}
+	</style>
+
+	<link rel="shortcut icon" type="image/x-icon"
+		href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuybiw3IVJVZIflge9VeKKavpm6KrKyGETRI7xN-lglXJoVRIdfa0XZGjarEmYA3khojw&usqp=CAU">
+</head>
+
+<body style="margin-top: 0%;">
+	<nav class="nav-style">
+		<ul>
+			<li style="margin-right:25%;">V WORLD</li>
+			<li><a href="#WORLD_SCIENCE_DAY">WORLD SCIENCE DAY</a></li>
+			<li><a href="#SCIENCE_SCIENTIST"> SCIENTISTS</a></li>
+			<li><i><a href="#SCIENCE_QUIZ"">QUIZ</a></i></li>
+			<li><a href="#SCIENCE_EXPERIMENT">SCIENCE EXPERIMENT</a></li>
+			<li><a href="#SPACE_SCIENCE">SPACE SCIENCE</a></i></li>
+			
+
+		</ul>
+	</nav>
+	<img src="assets/5.jpeg" class="banner-image" />
+	<div class="container-margin">
+		<section id="WORLD_SCIENCE_DAY" class="intro-section">
+			<h1 class="h1-heading"> WOLRD SCIENCE DAY</h1>
+			<p class="h1-heading-p">
+				Celebrated every 10 November, World Science Day for Peace and Development highlights the significant
+				role of science in society and the need to engage the wider public in debates on emerging scientific
+				issues. It also underlines the importance and relevance of science in our daily lives.<br>
+				By linking science more closely with society, World Science Day for Peace and Development aims to ensure
+				that citizens are kept informed of developments in science. It also underscores the role scientists play
+				in broadening our understanding of the remarkable, fragile planet we call home and in making our
+				societies more sustainable.</p>
+				<p style="color: #727272;"> The purpose of the Day is to:</p>
+			<ul >
+				<li class="li-fs">Strengthen public awareness of the role of science for peaceful and sustainable societies;</li><br/>
+				<li class="li-fs">Promote national and international solidarity for shared science between countries;</li><br/>
+				<li class="li-fs">Renew national and international commitment for the use of science for the benefit of societies;</li><br/>
+				<li class="li-fs">Draw attention to the challenges faced by science in raising support for the scientific endeavour.</li>
+			</ul>
+				<p class="h1-heading-p">
+				The Day offers the opportunity to mobilize all actors around the topic of science for peace and
+				development – from government officials to the media to school pupils. UNESCO strongly encourages all to
+				join in celebrating World Science Day for Peace and Development by organizing your own event or activity
+				on the day.</p>
+			
+
+		</section>
+		<section id="SCIENCE_SCIENTIST" style="margin-bottom: 60px">
+			<h1 class="h1-heading">SCIENTISTS</h1>
+			<p class="h1-heading-p">A scientist is a person who conducts scientific research to advance knowledge in an
+				area of
+				interest.<br>
+				In classical antiquity, there was no real ancient analog of a modern scientist. Instead,
+				philosophers engaged in the philosophical study of nature called natural philosophy, a precursor of
+				natural scienceThough Thales (circa 624-545 BC) was arguably the first scientist for describing
+				how cosmic events may be seen as natural, not necessarily caused by gods,it was
+				not until the 19th century that the term scientist came into regular use after it was coined by the
+				theologian, philosopher, and historian of science William Whewell in 1833.
+				<br>In modern times, many scientists have advanced degrees in an area of science and pursue
+				careers in various sectors of the economy such as academia, industry, government, and nonprofit
+				environments.
+			</p>
+
+			<div id="demo" class="carousel slide" data-ride="carousel">
+
+				<!-- Indicators -->
+				<ul class="carousel-indicators">
+					<li data-target="#demo" data-slide-to="0" class="active"></li>
+					<li data-target="#demo" data-slide-to="1"></li>
+					<li data-target="#demo" data-slide-to="2"></li>
+				</ul>
+
+				<!-- The slideshow -->
+				<div class="container carousel-inner no-padding">
+					<div class="carousel-item active">
+						<div class="col-xs-3 col-sm-3 col-md-3">
+							<div class="card">
+								<a href="#1">
+									<<img
+										src="https://digital.nls.uk/scientists/assets/images/content/john_logie_baird/portrait-baird.jpg"
+										alt="John" class="img-responsive">
+								</a>
+								<h1>Logie Baird
+									(1888-1946)</h1>
+								<p class="title">John Logie Baird was an engineer and inventor. Known as <i>'The Father
+										of
+										Television'</i>.He is most famous for being the first person to demonstrate a
+									working
+									television.</p>
+							</div>
+						</div>
+						<div class="col-xs-3 col-sm-3 col-md-3">
+							<div class="card">
+								<a href="#1">
+									<<img
+										src="https://digital.nls.uk/scientists/assets/images/content/alexander_graham_bell/portrait-bell.jpg"
+										alt="John" class="img-responsive">
+								</a>
+								<h1>Graham Bell (1847-1922)</h1>
+								<p class="title">Alexander Graham Bell is credited with the <i>invention of
+										the telephone.</i>The year was 1876 and he was 29 years old.</p>
+							</div>
+						</div>
+						<div class="col-xs-3 col-sm-3 col-md-3">
+							<div class="card">
+								<a href="#1">
+									<<img
+										src="https://digital.nls.uk/scientists/assets/images/content/joseph_black/portrait-black.jpg"
+										alt="John" class="img-responsive">
+								</a>
+								<h1>Joseph Black (1728-1799)</h1>
+								<p class="title">Joseph is considered one of the world's most
+									eminent chemists and one of the founding <i>fathers of the science of chemistry</i>.
+								</p>
+							</div>
+						</div>
+						<div class="col-xs-3 col-sm-3 col-md-3">
+							<div class="card">
+								<a href="#1">
+									<<img
+										src="https://digital.nls.uk/scientists/assets/images/content/alexander_fleming/portrait-fleming.jpg"
+										alt="John" class="img-responsive">
+								</a>
+								<h1>Alexander Fleming (1881-1955)</h1>
+								<p class="title">Fleming research and
+									observations led to the development of <i>penicillin</i> – generally considered to
+									be one of the
+									most important advances in medical history.</p>
+							</div>
+						</div>
+					</div>
+					</b>
+					<div class="carousel-item">
+						<div class="col-xs-3 col-sm-3 col-md-3">
+							<div class="card">
+								<a href="#1">
+									<<img
+										src="https://digital.nls.uk/scientists/assets/images/content/james_hutton/portrait-hutton.jpg"
+										alt="John" class="img-responsive">
+								</a>
+								<h1>James
+									Hutton (1726-1797)</h1>
+								<p class="title">James Hutton is credited with being the <i>founder of modern
+										geology.</i> The first to determine that the Earth is millions of years old,
+									Hutton
+									believed our planet is continually being formed.</p>
+							</div>
+						</div>
+
+						<div class="col-xs-3 col-sm-3 col-md-3">
+							<div class="card">
+								<a href="#1">
+									<<img
+										src="https://digital.nls.uk/scientists/assets/images/content/lord_kelvin/portrait-kelvin.jpg"
+										alt="John" class="img-responsive">
+								</a>
+								<h1>Lord
+									Kelvin (1824-1907)</h1>
+								<p class="title">Lord Kelvin (William Thomson) was an eminent physicist with a wide
+									range
+									of interests and enthusiasms.
+									Best remembered for his <i>talent for theoretical mathematics</i>, he also had a
+									practical
+									ability for solving problems. </p>
+							</div>
+						</div>
+						<div class="col-xs-3 col-sm-3 col-md-3">
+							<div class="card">
+								<a href="#1">
+									<<img
+										src="https://digital.nls.uk/scientists/assets/images/content/james_clerk_maxwell/portrait-maxwell.jpg"
+										alt="John" class="img-responsive">
+								</a>
+								<h1>James
+									Clerk Maxwell (1831-1879</h1>
+								<p class="title">James Clerk Maxwell is often called one of the <i>world's
+										greatest physicists</i>.Maxwell's theories were essential in the development of
+									technology we
+									now take for granted.</p>
+							</div>
+						</div>
+						<div class="col-xs-3 col-sm-3 col-md-3">
+							<div class="card">
+								<a href="#1">
+									<<img
+										src="https://digital.nls.uk/scientists/assets/images/content/john_napier/portrait-napier.jpg"
+										alt="John" class="img-responsive">
+								</a>
+								<h1>John
+									Napier (1555-1617)</h1>
+								<p class="title">Napier was a hugely influential figure in the 17th century. He is
+									widely considered to be the <i>first Scotsman to have made a significant
+										contribution to
+										scientific learning</i>.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="col-xs-3 col-sm-3 col-md-3">
+							<div class="card">
+								<a href="#1">
+									<<img
+										src="https://digital.nls.uk/scientists/assets/images/content/robert_watson_watt/portrait-watsonwatt.jpg"
+										alt="John" class="img-responsive">
+								</a>
+								<h1>Robert
+									Watson-Watt (1892-1973)</h1>
+								<p class="title">Robert Watson-Watt was a pioneer of <i>radar technology.</i>
+									Although he did not invent the idea of radio detection, he was the first to prove it
+									could
+									work on a large scale.
+								</p>
+							</div>
+						</div>
+						<div class="col-xs-3 col-sm-3 col-md-3">
+							<div class="card">
+								<a href="#1">
+									<<img
+										src="https://digital.nls.uk/scientists/assets/images/content/james_watt/portrait-watt2.jpg"
+										alt="John" class="img-responsive">
+								</a>
+								<h1>James
+									Watt (1736-1819)</h1>
+								<p class="title">James Watt was an inventor and mechanical engineer whose improvements
+									in <i>steam engine technology drove the Industrial Revolution</i>.
+									Watt did not invent the steam engine. </p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Left and right controls -->
+				<a class="carousel-control-prev" href="#demo" data-slide="prev">
+					<span class="carousel-control-prev-icon"></span>
+				</a>
+				<a class="carousel-control-next" href="#demo" data-slide="next">
+					<span class="carousel-control-next-icon"></span>
+				</a>
+			</div>
+
+
+			</center>
+		</section>
+
+
+		<div class="sectopn-wrapper" id="SCIENCE_QUIZ">
+			<h1 class="h1-heading">SCIENCE QUIZ</h1>
+			<center>
+				<div class="content-section" style="margin-top: 2%;">
+					<div class="content" id="content-1" style="display: block;">
+						<p style="">1. When is world science day celebrated ?&emsp;&emsp;&emsp;&emsp;&emsp; point-2 </p>
+						<table>
+							<tr>
+								<td><input name="question1"  class="margin-12" type="checkbox" />
+									<label for="question1">December 1</label>
+								</td>
+							</tr>
+							<tr>
+								<td><input name="question1" class="margin-12" type="checkbox" />
+									<label for="question1">November 18</label>
+								</td>
+							</tr>
+							<tr>
+								<td><input name="question1" class="margin-12" type="checkbox" />
+									<label for="question1">November 10</label>
+								</td>
+							</tr>
+							<tr>
+								<td><input name="question1" class="margin-12" type="checkbox" />
+									<label for="question1">November 9</label>
+								</td>
+							</tr>
+						</table>
+						<button type="button" class="back">&laquo; Previous</button>
+						<button type="button" class="next">Next &raquo;</button>
+					</div>
+					<div class="content" id="content-2">
+						<table>
+							<tr>
+								<td>
+									<p style="">1.Q. Why is world science day celebrated ?&emsp;&emsp;&emsp;&emsp;&emsp;
+										point-2</p>
+								</td>
+							</tr>
+							<tr>
+								<td><input name="question2"  class="margin-12" type="checkbox" />
+									<label for="question2">To draw attention to the challenges faced
+										by science.</label></td>
+							</tr>
+							<tr>
+								<td><input name="question2" class="margin-12" type="checkbox" />
+									<label for="question2">Strengthen public awareness on the role
+										of science.</label>
+								</td>
+							</tr>
+							<tr>
+								<td><input name="question2" class="margin-12" type="checkbox" />
+									<label for="question2">Promote national and international
+										solidarity for shared science between countries.</label>
+								</td>
+							</tr>
+							<tr>
+								<td><input name="question2" class="margin-12" type="checkbox" />
+									<label for="question2">Improve the science and Technology.</label>
+								</td>
+							</tr>
+						</table>
+						<button type="button" class="back">Back</button>
+						<button type="button" class="next">Next</button>
+					</div>
+					<div class="content" id="content-3">
+						<table>
+							<tr>
+								<td>
+									<p>What is the theme of the world science day for 2019
+										?&emsp;&emsp;&emsp;&emsp;&emsp; point-2</p>
+							<tr>
+								<td><input name="question3" class="margin-12" type="checkbox" />
+									<label for="question3">Towards green societies</label>
+									</td>
+							</tr>
+							<tr>
+								<td><input name="question3" class="margin-12" type="checkbox" />
+									<label for="question3">Human Right</label>
+								</td>
+							</tr>
+							<tr>
+								<td><input class="margin-12" type="checkbox" />
+									<label for="question3">Open Science, leaving no one behind.</label>
+								</td>
+							</tr>
+							<tr>
+								<td><input name="question3" class="margin-12" type="checkbox" />
+									<label for="question3">The world is struggling with the global
+										COVID-19 pandemic.</label>
+								</td>
+							</tr>
+						</table>
+						<button type="button" class="back">Back</button>
+						<button type="button" class="next">Next</button>
+					</div>
+					<div class="content" id="content-4">
+						<table>
+							<tr>
+								<td>
+									<p>Q. Science day is celebrated in India to Honou &emsp;&emsp;&emsp;&emsp;&emsp;
+										point-2</p>
+								</td>
+							</tr>
+							<tr>
+								<td><input name="question4" class="margin-12" type="checkbox" />
+									<label for="question4">Sir CV Raman</label>
+								</td>
+							</tr>
+							<tr>
+								<td><input name="question4"class="margin-12" type="checkbox" />
+									<label for="question4">Homi J. Bhabha</label>
+								</td>
+							</tr>
+							<tr>
+								<td><input name="question4"class="margin-12" type="checkbox" />
+									<label for="question4">C.P. Srinivasa Ramanujan</label>
+								</td>
+							</tr>
+							<tr>
+								<td><input name="question4" class="margin-12" type="checkbox" />
+									<label for="question4">Jagadish Chandra Bose</label>
+								</td>
+							</tr>
+						</table>
+						<button type="button" class="back">Back</button>
+						<button type="button" class="next">Next</button>
+					</div>
+					<div class="content" id="content-5">
+						<table>
+							<tr>
+								<td>
+									<p> UNESCO headquarters is located in ? &emsp;&emsp;&emsp;&emsp;&emsp; point-2</p>
+								</td>
+							</tr>
+							<tr>
+								<td><input name="question5" class="margin-12" type="checkbox" />
+									<label for="question5">Geneva, Switzerland.</label>
+								 </td>
+							</tr>
+							<tr>
+								<td><input name="question5" class="margin-12" type="checkbox" />
+									<label for="question5">Washington, USA.</label>
+								</td>
+							</tr>
+							<tr>
+								<td><input name="question5" class="margin-12" type="checkbox" />
+									<label for="question5">Paris, France.</label>
+								</td>
+							</tr>
+							<tr>
+								<td><input name="question5" class="margin-12" type="checkbox" />
+									<label for="question5">London, England.</label>
+								</td>
+							</tr>
+						</table>
+						<button type="button" class="back">Back</button>
+						<button type="button" class="next">Next</button>
+					</div>
+				</div>
+				<div class="end" id="result">
+					<div class="thankyou_desc" id="thankyou">
+						<div class="cross_icon_alert">
+							<span><i class="fa fa-close"></i></span>
+						</div>
+						<div class="image">
+							<img src="assets/thank_you.png" alt="Thank you Image" />
+						</div>
+						<h1>Great! Thank you for participating in the Science Quiz.</h1>
+						<div class="button">
+							<button class="edit-previous" style="	background-color: #04AA6D;
+						color: white;">Try Again</button>
+						</div>
+					</div>
+				</div>
+		</div>
+		</center>
+
+
+		<section id="SPACE_SCIENCE">
+			<h1 class="h1-heading">SPACE SCIENCE</h1>
+			<div class="flex-container">
+				<div class="flex-item">
+					<iframe width="500" height="290" src="https://www.youtube.com/embed/libKVRa01L8"
+						title="YouTube video player" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>ssjgj
+					</iframe>
+				</div>
+				<div class="flex-item">
+					<iframe width="500" height="290" src="https://www.youtube.com/embed/_oCgtA9E6YI"
+						title="YouTube video player" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe><br><br><br><br><Br><br>
+				</div>
+				<div class="flex-item">
+					<iframe width="500" height="290" src="https://www.youtube.com/embed/oU-WyOqRdrs"
+						title="YouTube video player" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				</div>
+		</section>
+
+		<section id="SCIENCE_EXPERIMENT" class="sectopn-wrapper">
+			<h1 class="h1-heading">SCIENCE EXPERIMENT</h1>
+			<div class="flex-container">
+				<div class="flex-item">
+					<iframe width="500" height="290" src="https://www.youtube.com/embed/TKgzQmV1KEY"
+						title="YouTube video player" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				</div>
+				<div class="flex-item">
+					<iframe width="500" height="290" src="https://www.youtube.com/embed/KQEqwX8LcaA"
+						title="YouTube video player" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen>
+					</iframe>
+				</div>
+				<div class="flex-item">
+					<iframe width="500" height="290" src="https://www.youtube.com/embed/KJdkHXYpKYA"
+						title="YouTube video player" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				</div>
+			</div>
+		</section>
+	</div>
+		<div class="fotter-wraper">
+			<center>
+				<h3 style="text-align: center;">The page is designed and developer by Gunagya Agarwal</h3>
+			</center>
+		</div>
+	
+
+	<script type="text/javascript">
+		var counter = 1;
+		$('body').on('click', '.next', function () {
+			
+			var checkboxes = document.getElementsByName('question'+counter);
+			var selected = [];
+			for (var i=0; i<checkboxes.length; i++) {
+				if (checkboxes[i].checked) {
+					selected.push(checkboxes[i].value);
+				}
+			}
+
+			if(selected.length>0){
+				$('.content').hide();
+
+				counter++;
+				$('#content-' + counter + '').show();
+	
+				if (counter > 1) {
+					$('.back').show();
+				};
+				if (counter > 5) {
+					$('.content-section').hide();
+					$('.end').show();
+				};
+			}else{
+				alert("please select your option/s");
+			}
+		
+
+		});
+
+		$('body').on('click', '.back', function () {
+			//alert(counter);
+			counter--;
+			$('.content').hide();
+			var id = counter;
+			$('#content-' + id).show();
+			if (counter < 2) {
+				$('.back').hide();
+			}
+
+
+
+		});
+
+		$('body').on('click', '.edit-previous', function () {
+			$('.content-section').show();
+			$('.content-holder').show();
+			$('.end').hide();
+			$('#content-1').show();
+			counter = 1;
+			$('input[type=checkbox]').prop('checked',false);
+		});
+
+	</script>
+
+</body>
+
+</html>
